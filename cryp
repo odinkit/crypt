@@ -1,0 +1,25 @@
+import math
+
+def calculate_surface_area(radius):
+    """
+    Calculate the surface area of a planet given its radius.
+    
+    Parameters:
+    radius (float): The radius of the planet.
+    
+    Returns:
+    float: The surface area of the planet.
+    """
+    if radius <= 0:
+        raise ValueError("Radius must be greater than zero.")
+    
+    surface_area = 4 * math.pi * radius ** 2
+    return surface_area
+
+# Example usage:
+try:
+    radius = float(input("Enter the radius of the planet in kilometers: "))
+    surface_area = calculate_surface_area(radius)
+    print(f"The surface area of the planet is {surface_area:.2f} square kilometers.")
+except ValueError as e:
+    print(e)
